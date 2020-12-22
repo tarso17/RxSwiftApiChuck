@@ -49,18 +49,10 @@ class ChuckNorrisFactService: ChuckNorrisFactServiceProtocol {
             
             let task = URLSession.shared.dataTask(with: URL(string: K.apiUrl+"search?query=\(fact)")!){
                 data, response , _ in
-                let httpResponse = response as? HTTPURLResponse
-                
-                if httpResponse?.statusCode == 400{
-                    observer.onError(SearchError.atLeast3Letters)
-                    return
-                }
-                
-                
+   
                 guard let data = data else {
                     
                     observer.onError(SearchError.error)
-                    print("Ocorreu um erro")
                     return
                 }
                 do {
