@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 class HomeViewController: UIViewController {
-    @IBOutlet weak var StatusLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -23,17 +23,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         print("ViewDidLoad")
         super.viewDidLoad()
-    viewModel.isLoading.drive(activityView.rx.isAnimating).disposed(by: disposeBag)
-        
-        self.tableView.keyboardDismissMode = .onDrag
-        tableView.tableFooterView = UIView()
-        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellID)
         
         activityView.center = self.view.center
         activityView.color = .red
         self.view.addSubview(activityView)
         
-
+        statusLabel.adjustsFontSizeToFitWidth = true
+        statusLabel.minimumScaleFactor = 0.2
+        viewModel.error.drive(statusLabel.rx.text).disposed(by: disposeBag)
+        viewModel.isLoading.drive(activityView.rx.isAnimating).disposed(by: disposeBag)
+        viewModel.status.drive(statusView.rx.isHidden).disposed(by: disposeBag)
+        
+        self.tableView.keyboardDismissMode = .onDrag
+        tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellID)
+        
+        
         let searchResults = searchBar.rx.text.orEmpty
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()

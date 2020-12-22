@@ -65,8 +65,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="StatusLabel" destination="eme-fA-cz5" id="eaW-Ku-NMj"/>
                         <outlet property="searchBar" destination="oy4-yy-00Q" id="IFk-cJ-atE"/>
+                        <outlet property="statusLabel" destination="eme-fA-cz5" id="eaW-Ku-NMj"/>
                         <outlet property="statusView" destination="Q3x-xl-3Mi" id="hCC-DV-kcg"/>
                         <outlet property="tableView" destination="EQ0-M6-97k" id="c7f-Rn-z7B"/>
                     </connections>
