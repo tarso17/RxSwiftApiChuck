@@ -10,4 +10,6 @@ import Foundation
 
 struct K {
     static let apiUrl = "https://api.chucknorris.io/jokes/"
+    static let cellID = "FactCell"
+    static let cellNibName = "FactTableViewCell"
 }

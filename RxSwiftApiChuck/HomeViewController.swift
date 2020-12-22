@@ -20,9 +20,9 @@ class HomeViewController: UIViewController {
         print("ViewDidLoad")
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
-        tableView.register(UINib(nibName: "FactTableViewCell", bundle: nil), forCellReuseIdentifier: "FactCell")
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellID)
         
-        viewModel.fetchFactViewModels("teste").bind(to: tableView.rx.items(cellIdentifier: "FactCell", cellType: FactTableViewCell.self))  {
+        viewModel.fetchFactViewModels("teste").bind(to: tableView.rx.items(cellIdentifier: K.cellID, cellType: FactTableViewCell.self))  {
             (index, fact: ChuckNorrisFactViewModel, cell) in
             cell.bodyLabel.text = fact.body
             cell.categoryLabel.text = fact.category
