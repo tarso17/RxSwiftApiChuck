@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxSwiftApiChuck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" text="Search for a fact " translatesAutoresizingMaskIntoConstraints="NO" id="oy4-yy-00Q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EQ0-M6-97k">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3x-xl-3Mi">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eme-fA-cz5">
+                                        <rect key="frame" x="37.5" y="288.5" width="300" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="9Uk-DQ-ZEI"/>
+                                            <constraint firstAttribute="width" constant="300" id="TbJ-6g-F5a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.64313725490196072" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="eme-fA-cz5" firstAttribute="centerX" secondItem="Q3x-xl-3Mi" secondAttribute="centerX" id="Dfi-BJ-lQA"/>
+                                    <constraint firstItem="eme-fA-cz5" firstAttribute="centerY" secondItem="Q3x-xl-3Mi" secondAttribute="centerY" id="Uwl-dO-6pT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q3x-xl-3Mi" secondAttribute="trailing" id="9Kb-Em-5rx"/>
+                            <constraint firstItem="oy4-yy-00Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AH0-kt-zPp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q3x-xl-3Mi" secondAttribute="bottom" id="Ebe-kn-2TW"/>
+                            <constraint firstItem="EQ0-M6-97k" firstAttribute="top" secondItem="oy4-yy-00Q" secondAttribute="bottom" id="KUd-g6-wmk"/>
+                            <constraint firstItem="Q3x-xl-3Mi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rnc-R2-w75"/>
+                            <constraint firstItem="EQ0-M6-97k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ts5-Vy-6sG"/>
+                            <constraint firstItem="Q3x-xl-3Mi" firstAttribute="top" secondItem="oy4-yy-00Q" secondAttribute="bottom" id="U8a-GF-0T2"/>
+                            <constraint firstItem="Q3x-xl-3Mi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y3E-mw-WVi"/>
+                            <constraint firstItem="Q3x-xl-3Mi" firstAttribute="top" secondItem="oy4-yy-00Q" secondAttribute="bottom" id="enc-Sk-0Gp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q3x-xl-3Mi" secondAttribute="trailing" id="gs2-xw-BoD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EQ0-M6-97k" secondAttribute="bottom" id="ivW-65-y6X"/>
+                            <constraint firstItem="oy4-yy-00Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jB7-m9-fCi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q3x-xl-3Mi" secondAttribute="bottom" id="oxi-MO-PDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EQ0-M6-97k" secondAttribute="trailing" id="vTd-Fa-bcC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oy4-yy-00Q" secondAttribute="trailing" id="xHX-NK-Zui"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
         </scene>
     </scenes>
 </document>
