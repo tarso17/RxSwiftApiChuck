@@ -22,7 +22,19 @@ class HomeViewController: UIViewController {
         self.tableView.keyboardDismissMode = .onDrag
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellID)
         
-        viewModel.fetchFactViewModels("teste").bind(to: tableView.rx.items(cellIdentifier: K.cellID, cellType: FactTableViewCell.self))  {
+        let searchResults = searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .flatMapLatest { query -> Observable<[ChuckNorrisFactViewModel]> in
+                if query.isEmpty {
+                    self.searchBar.placeholder = "Search for a Chuck Norris Fact"
+                    return self.viewModel.fetchFactViewModels(self.searchBar.text!)
+                }
+                return self.viewModel.fetchFactViewModels(self.searchBar.text!)
+                
+        }.observeOn(MainScheduler.instance)
+        
+        searchResults.bind(to: tableView.rx.items(cellIdentifier: K.cellID, cellType: FactTableViewCell.self))  {
             (index, fact: ChuckNorrisFactViewModel, cell) in
             cell.bodyLabel.text = fact.body
             cell.categoryLabel.text = fact.category
