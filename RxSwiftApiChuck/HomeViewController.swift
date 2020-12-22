@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        print("ViewDidLoad")
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
         // Do any additional setup after loading the view.
