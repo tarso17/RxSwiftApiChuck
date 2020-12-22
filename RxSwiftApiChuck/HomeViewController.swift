@@ -19,9 +19,9 @@ class HomeViewController: UIViewController {
         print("ViewDidLoad")
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
-        ChuckNorrisFactService().fetchFacts("teste").subscribe(onNext: { (facts) in
-            print(facts)
-            }).disposed(by: disposeBag)
+//        ChuckNorrisFactService().fetchFacts("teste").subscribe(onNext: { (facts) in
+//            print(facts)
+//            }).disposed(by: disposeBag)
     }
     
     static func instanciate() -> HomeViewController{
