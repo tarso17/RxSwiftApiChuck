@@ -59,6 +59,7 @@ class HomeViewController: UIViewController {
             cell.bodyLabel.text = fact.body
             cell.categoryLabel.text = fact.category
             cell.shareButton.rx.tap.subscribe(onNext: { (_) in
+                self.shareFact(fact.body)
             }).disposed(by: self.disposeBag)
             
         }
@@ -71,6 +72,14 @@ class HomeViewController: UIViewController {
         viewController.viewModel = viewModel
         return viewController
     }
+    
+    func shareFact(_ fact:String){
+         let textToShare = ["Chuck Norris Fact: \(fact)"]
+         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+         
+         self.present(activityViewController, animated: true, completion: nil)
+         
+     }
     
     
 }
