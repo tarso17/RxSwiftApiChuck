@@ -15,18 +15,28 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     let disposeBag = DisposeBag()
+    private var viewModel: ChuckNorrisFactsListViewModel!
     override func viewDidLoad() {
         print("ViewDidLoad")
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
-//        ChuckNorrisFactService().fetchFacts("teste").subscribe(onNext: { (facts) in
-//            print(facts)
-//            }).disposed(by: disposeBag)
+        tableView.register(UINib(nibName: "FactTableViewCell", bundle: nil), forCellReuseIdentifier: "FactCell")
+        
+        viewModel.fetchFactViewModels("teste").bind(to: tableView.rx.items(cellIdentifier: "FactCell", cellType: FactTableViewCell.self))  {
+            (index, fact: ChuckNorrisFactViewModel, cell) in
+            cell.bodyLabel.text = fact.body
+            cell.categoryLabel.text = fact.category
+            cell.shareButton.rx.tap.subscribe(onNext: { (_) in
+            }).disposed(by: self.disposeBag)
+            
+        }
+        .disposed(by: disposeBag)
     }
     
-    static func instanciate() -> HomeViewController{
+    static func instanciate(viewModel:ChuckNorrisFactsListViewModel) -> HomeViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let viewController = storyboard.instantiateInitialViewController() as! HomeViewController
+        viewController.viewModel = viewModel
         return viewController
     }
     
