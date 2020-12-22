@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		27A8814525923BD3008A2658 /* RxSwiftApiChuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8814425923BD3008A2658 /* RxSwiftApiChuckUITests.swift */; };
 		27A8815825924452008A2658 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8815625924452008A2658 /* FactTableViewCell.swift */; };
 		27A8815925924452008A2658 /* FactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A8815725924452008A2658 /* FactTableViewCell.xib */; };
+		27F871A72592644400D56E11 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F871A62592644400D56E11 /* AppCoordinator.swift */; };
 		52DBC0CB2762F33C40F686A2 /* Pods_RxSwiftApiChuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799A6B19B2649367D5989622 /* Pods_RxSwiftApiChuck.framework */; };
 		668D30E86187CE194AA24FED /* Pods_RxSwiftApiChuckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D6F0A7D14D0A476DF7E7D /* Pods_RxSwiftApiChuckTests.framework */; };
 		C459F1CBB6B79A5738321C1D /* Pods_RxSwiftApiChuck_RxSwiftApiChuckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA37F2816F6A8CC95886B4DD /* Pods_RxSwiftApiChuck_RxSwiftApiChuckUITests.framework */; };
@@ -57,6 +58,7 @@
 		27A8814625923BD3008A2658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A8815625924452008A2658 /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		27A8815725924452008A2658 /* FactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactTableViewCell.xib; sourceTree = "<group>"; };
+		27F871A62592644400D56E11 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		392D6F0A7D14D0A476DF7E7D /* Pods_RxSwiftApiChuckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftApiChuckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD16F1C1EF93666981B44FE /* Pods-RxSwiftApiChuckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApiChuckTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftApiChuckTests/Pods-RxSwiftApiChuckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EEF3514B2E136DC7BF445EE /* Pods-RxSwiftApiChuckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApiChuckTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftApiChuckTests/Pods-RxSwiftApiChuckTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				27A8813025923BD3008A2658 /* Info.plist */,
 				27A8815625924452008A2658 /* FactTableViewCell.swift */,
 				27A8815725924452008A2658 /* FactTableViewCell.xib */,
+				27F871A62592644400D56E11 /* AppCoordinator.swift */,
 			);
 			path = RxSwiftApiChuck;
 			sourceTree = "<group>";
@@ -161,7 +164,6 @@
 				3CD16F1C1EF93666981B44FE /* Pods-RxSwiftApiChuckTests.debug.xcconfig */,
 				5EEF3514B2E136DC7BF445EE /* Pods-RxSwiftApiChuckTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -417,6 +419,7 @@
 			files = (
 				27A8812725923BD1008A2658 /* HomeViewController.swift in Sources */,
 				27A8812325923BD1008A2658 /* AppDelegate.swift in Sources */,
+				27F871A72592644400D56E11 /* AppCoordinator.swift in Sources */,
 				27A8812525923BD1008A2658 /* SceneDelegate.swift in Sources */,
 				27A8815825924452008A2658 /* FactTableViewCell.swift in Sources */,
 			);
@@ -601,7 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saulo.RxSwiftApiChuck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -619,7 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saulo.RxSwiftApiChuck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -20,6 +20,12 @@ class HomeViewController: UIViewController {
         self.tableView.keyboardDismissMode = .onDrag
         // Do any additional setup after loading the view.
     }
+    
+    static func instanciate() -> HomeViewController{
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateInitialViewController() as! HomeViewController
+        return viewController
+    }
 
 
 }
