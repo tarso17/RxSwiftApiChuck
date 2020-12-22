@@ -16,8 +16,7 @@ class AppCoordinator {
     }
     func start(){
         let viewController = HomeViewController.instanciate(viewModel: ChuckNorrisFactsListViewModel() )
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
+        window.rootViewController = viewController
         window.makeKeyAndVisible()
         
     }

@@ -29,7 +29,6 @@ class ChuckNorrisFactsListViewModel {
             .asDriver(onErrorJustReturn: true)
     }
     
-    let title = "Chuck Norris Facts"
     private let chuckNorrisFactService: ChuckNorrisFactServiceProtocol
     
     init(chuckNorrisFactService:ChuckNorrisFactServiceProtocol = ChuckNorrisFactService()){

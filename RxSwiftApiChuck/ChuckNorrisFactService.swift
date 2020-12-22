@@ -50,7 +50,7 @@ class ChuckNorrisFactService: ChuckNorrisFactServiceProtocol {
             let task = URLSession.shared.dataTask(with: URL(string: K.apiUrl+"search?query=\(fact)")!){
                 data, response , _ in
                 let httpResponse = response as? HTTPURLResponse
-                // print("Resposta do http = ",httpResponse?.statusCode)
+                
                 if httpResponse?.statusCode == 400{
                     observer.onError(SearchError.atLeast3Letters)
                     return
@@ -64,8 +64,6 @@ class ChuckNorrisFactService: ChuckNorrisFactServiceProtocol {
                     return
                 }
                 do {
-                    //                    let json = String(data: data, encoding: String.Encoding.utf8)
-                    //                    print(json)
                     let facts = try JSONDecoder().decode(Result.self, from: data).result
                     observer.onNext(facts)
                     if facts.isEmpty {
