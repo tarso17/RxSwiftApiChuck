@@ -22,6 +22,7 @@
 		27F871AD2592690500D56E11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F871AC2592690500D56E11 /* Constants.swift */; };
 		27F871AF2592694800D56E11 /* ChuckNorrisFactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F871AE2592694800D56E11 /* ChuckNorrisFactService.swift */; };
 		27F871B125926CC700D56E11 /* ChuckNorrisFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F871B025926CC700D56E11 /* ChuckNorrisFactViewModel.swift */; };
+		27F871B325926D4C00D56E11 /* ChuckNorrisFactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F871B225926D4C00D56E11 /* ChuckNorrisFactsListViewModel.swift */; };
 		52DBC0CB2762F33C40F686A2 /* Pods_RxSwiftApiChuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799A6B19B2649367D5989622 /* Pods_RxSwiftApiChuck.framework */; };
 		668D30E86187CE194AA24FED /* Pods_RxSwiftApiChuckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D6F0A7D14D0A476DF7E7D /* Pods_RxSwiftApiChuckTests.framework */; };
 		C459F1CBB6B79A5738321C1D /* Pods_RxSwiftApiChuck_RxSwiftApiChuckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA37F2816F6A8CC95886B4DD /* Pods_RxSwiftApiChuck_RxSwiftApiChuckUITests.framework */; };
@@ -67,6 +68,7 @@
 		27F871AC2592690500D56E11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27F871AE2592694800D56E11 /* ChuckNorrisFactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactService.swift; sourceTree = "<group>"; };
 		27F871B025926CC700D56E11 /* ChuckNorrisFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactViewModel.swift; sourceTree = "<group>"; };
+		27F871B225926D4C00D56E11 /* ChuckNorrisFactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsListViewModel.swift; sourceTree = "<group>"; };
 		392D6F0A7D14D0A476DF7E7D /* Pods_RxSwiftApiChuckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftApiChuckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD16F1C1EF93666981B44FE /* Pods-RxSwiftApiChuckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApiChuckTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftApiChuckTests/Pods-RxSwiftApiChuckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EEF3514B2E136DC7BF445EE /* Pods-RxSwiftApiChuckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApiChuckTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftApiChuckTests/Pods-RxSwiftApiChuckTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				27F871AC2592690500D56E11 /* Constants.swift */,
 				27F871AE2592694800D56E11 /* ChuckNorrisFactService.swift */,
 				27F871B025926CC700D56E11 /* ChuckNorrisFactViewModel.swift */,
+				27F871B225926D4C00D56E11 /* ChuckNorrisFactsListViewModel.swift */,
 			);
 			path = RxSwiftApiChuck;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				27A8812325923BD1008A2658 /* AppDelegate.swift in Sources */,
 				27F871A72592644400D56E11 /* AppCoordinator.swift in Sources */,
 				27A8812525923BD1008A2658 /* SceneDelegate.swift in Sources */,
+				27F871B325926D4C00D56E11 /* ChuckNorrisFactsListViewModel.swift in Sources */,
 				27F871AD2592690500D56E11 /* Constants.swift in Sources */,
 				27A8815825924452008A2658 /* FactTableViewCell.swift in Sources */,
 				27F871A92592682300D56E11 /* ChuckNorrisFact.swift in Sources */,
