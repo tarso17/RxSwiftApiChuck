@@ -15,6 +15,8 @@
 		27A8812F25923BD3008A2658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A8812D25923BD3008A2658 /* LaunchScreen.storyboard */; };
 		27A8813A25923BD3008A2658 /* RxSwiftApiChuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8813925923BD3008A2658 /* RxSwiftApiChuckTests.swift */; };
 		27A8814525923BD3008A2658 /* RxSwiftApiChuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8814425923BD3008A2658 /* RxSwiftApiChuckUITests.swift */; };
+		27A8815825924452008A2658 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8815625924452008A2658 /* FactTableViewCell.swift */; };
+		27A8815925924452008A2658 /* FactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A8815725924452008A2658 /* FactTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		27A8814025923BD3008A2658 /* RxSwiftApiChuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftApiChuckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A8814425923BD3008A2658 /* RxSwiftApiChuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftApiChuckUITests.swift; sourceTree = "<group>"; };
 		27A8814625923BD3008A2658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A8815625924452008A2658 /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		27A8815725924452008A2658 /* FactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				27A8812B25923BD3008A2658 /* Assets.xcassets */,
 				27A8812D25923BD3008A2658 /* LaunchScreen.storyboard */,
 				27A8813025923BD3008A2658 /* Info.plist */,
+				27A8815625924452008A2658 /* FactTableViewCell.swift */,
+				27A8815725924452008A2658 /* FactTableViewCell.xib */,
 			);
 			path = RxSwiftApiChuck;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				27A8812F25923BD3008A2658 /* LaunchScreen.storyboard in Resources */,
 				27A8812C25923BD3008A2658 /* Assets.xcassets in Resources */,
 				27A8812A25923BD1008A2658 /* Main.storyboard in Resources */,
+				27A8815925924452008A2658 /* FactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +269,7 @@
 				27A8812725923BD1008A2658 /* HomeViewController.swift in Sources */,
 				27A8812325923BD1008A2658 /* AppDelegate.swift in Sources */,
 				27A8812525923BD1008A2658 /* SceneDelegate.swift in Sources */,
+				27A8815825924452008A2658 /* FactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
