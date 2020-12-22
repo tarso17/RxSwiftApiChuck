@@ -7,18 +7,21 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 class HomeViewController: UIViewController {
     @IBOutlet weak var StatusLabel: UILabel!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var tableView: UITableView!
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         print("ViewDidLoad")
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
-        // Do any additional setup after loading the view.
+        ChuckNorrisFactService().fetchFacts("teste").subscribe(onNext: { (facts) in
+            print(facts)
+            }).disposed(by: disposeBag)
     }
     
     static func instanciate() -> HomeViewController{
@@ -26,7 +29,7 @@ class HomeViewController: UIViewController {
         let viewController = storyboard.instantiateInitialViewController() as! HomeViewController
         return viewController
     }
-
-
+    
+    
 }
 
